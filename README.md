@@ -19,6 +19,7 @@ This project focuses on mining actionable knowledge from social media data, part
 ├── notebooks/               # Jupyter notebooks for analysis and visualization
 ├── scripts/                 # Python scripts for dashboard and training the model
 ├── reports/                 # Reports and visualizations
+├── requirements.txt         # Dependencies for scripts
 └── README.md                # Project overview (this file)
 ```
 
@@ -41,6 +42,22 @@ The dataset contains:
 
 ## Usage
 
+### Clone the repo and install dependencise
+
+```bash
+git clone https://github.com/n-pizzetta/WebminingForCrisis.git
+cd WebminingForCrisis
+
+# Optional
+python -m venv .venv
+source .venv/bin/activate  # For Linux/Mac
+# or .venv\Scripts\activate  # For Windows
+
+# Run
+pip install -r requirements.txt
+```
+
+
 ### Running the Dashboard
 Navigate to the project folder and execute the dashboard script:
 ```bash
@@ -52,12 +69,6 @@ Run the training script:
 ```bash
 python scripts/train_model.py
 ```
-
-## Contributing
-Contributions are welcome! If you wish to contribute:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request.
 
 ## Authors
 - Tom Devynck
