@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import nltk
 
 from pages import visualization, home, topics, sentiments, wordclouds
 
