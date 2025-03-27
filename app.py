@@ -5,6 +5,14 @@ from pages import visualization, home, topics, sentiments, wordclouds
 
 st.set_page_config(layout="wide")
 
+# Downloading stop-words
+@st.cache_data
+def download_nltk_stopwords():
+    nltk.download('stopwords')
+
+# Call the function at the beginning of your script
+download_nltk_stopwords()
+
 st.markdown(
     """
     <style>

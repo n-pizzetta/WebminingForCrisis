@@ -11,9 +11,6 @@ def remove_urls(text):
     return re.sub(url_pattern, '', text)
 
 def import_data_per_day():
-
-    nltk.download('stopwords')
-    
     stop_words = set(stopwords.words("english"))
     
     tweets_per_day = Counter()

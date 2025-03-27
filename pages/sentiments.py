@@ -6,7 +6,6 @@ from textblob import TextBlob
 from nltk.corpus import stopwords
 
 def load_event_mapping():
-    nltk.download('stopwords')
     # Load stop words
     stop_words = set(stopwords.words("english"))
     event_mapping = {}
@@ -28,7 +27,6 @@ def remove_urls(text):
     return re.sub(url_pattern, '', text)
 
 def load_tweets_with_sentiment():
-    nltk.download('stopwords')
     # Load stop words
     stop_words = set(stopwords.words("english"))
     tweets_with_sentiment = []
