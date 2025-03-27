@@ -27,6 +27,9 @@ def remove_urls(text):
     return re.sub(url_pattern, '', text)
 
 def load_tweets_by_event():
+
+    nltk.download('stopwords')
+    
     tweets_by_event = {}
     event_mapping = load_event_mapping()
     stop_words = set(stopwords.words('english'))

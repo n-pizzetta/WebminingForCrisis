@@ -6,13 +6,14 @@ from datetime import datetime
 import plotly.graph_objects as go
 from nltk.corpus import stopwords
 
-
 def remove_urls(text):
     url_pattern = r'http[s]?://\S+|www\.\S+'
     return re.sub(url_pattern, '', text)
 
 def import_data_per_day():
 
+    nltk.download('stopwords')
+    
     stop_words = set(stopwords.words("english"))
     
     tweets_per_day = Counter()

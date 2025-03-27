@@ -5,10 +5,10 @@ import plotly.express as px
 from textblob import TextBlob
 from nltk.corpus import stopwords
 
-# Load stop words
-stop_words = set(stopwords.words("english"))
-
 def load_event_mapping():
+    nltk.download('stopwords')
+    # Load stop words
+    stop_words = set(stopwords.words("english"))
     event_mapping = {}
     with open("DATASET-20250325/database/Nodes/Event.json", "r", encoding="utf-8") as file:
         for line in file:
@@ -28,6 +28,9 @@ def remove_urls(text):
     return re.sub(url_pattern, '', text)
 
 def load_tweets_with_sentiment():
+    nltk.download('stopwords')
+    # Load stop words
+    stop_words = set(stopwords.words("english"))
     tweets_with_sentiment = []
     event_mapping = load_event_mapping()
     
