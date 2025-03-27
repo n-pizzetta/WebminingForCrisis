@@ -22,8 +22,5 @@ tabulate==0.8.9
 tqdm==4.66.5
 transformers==4.44.2
 wordcloud==1.9.4
-<<<<<<< HEAD
 textblob==0.18.0
-=======
-textblob==0.18.0
->>>>>>> 25cd02f8b7d242db5a1a70d754701313b303dd8f
+
