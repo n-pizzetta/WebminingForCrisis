@@ -7,6 +7,8 @@ import plotly.graph_objects as go
 from nltk.corpus import stopwords
 
 def remove_urls(text):
+    """Remove URLs from a text string."""
+    
     url_pattern = r'http[s]?://\S+|www\.\S+'
     return re.sub(url_pattern, '', text)
 
